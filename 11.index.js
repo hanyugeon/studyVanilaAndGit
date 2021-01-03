@@ -5,9 +5,12 @@
 // DOM : document object model
 
 const title = document.querySelector("#title");
+console.dir(document);
+console.dir(title);
 title.innerHTML = "Hi! From JS";
 title.style.color = "black";
-document.title = "i own you now"
+document.title = "i own you now";
 
 // js를 이용해서 어떻게 html을 변경 할 수 있는지
 // 어떻게 내용을 추가 할 수 있는지 이해하는 과정
+// 2-3 과정
