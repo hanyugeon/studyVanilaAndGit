@@ -1,3 +1,11 @@
+.btn {
+    cursor : pointer;
+}
+
+body {
+    color : #8b8b8b;
+}
+
 .clicked {
     color : #8b8b8b;
 }
