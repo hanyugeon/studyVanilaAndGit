@@ -5,7 +5,31 @@ const toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = "toDos";
 
-const toDos = [];
+let toDos = [];
+
+function deleteToDo(event) {
+    const button = event.target;
+    const li = button.parentNode;
+    toDoList.removeChild(li);
+    const cleanToDos = toDos.filter(function(toDo){
+        return toDo.id !== parseInt(li.id);
+        // parseInt를 통해 string을 int로 바꿀 수 있다.
+    })
+    toDos = cleanToDos
+    saveToDos();
+}
+
+function checkToDo(event) {
+    const button = event.target;
+    const li = button.parentNode;
+    toDoList.removeChild(li);
+    const cleanToDos = toDos.filter(function(toDo){
+        return toDo.id !== parseInt(li.id);
+        // parseInt를 통해 string을 int로 바꿀 수 있다.
+    })
+    toDos = cleanToDos
+    saveToDos();
+}
 
 function saveToDos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
@@ -20,7 +44,9 @@ function paintToDo(text) {
     const span = document.createElement("span");
     const newId = toDos.length + 1;
     deleteButton.innerText = "❎";
-    checkButton.innerText = "✅"
+    deleteButton.addEventListener("click", deleteToDo);
+    checkButton.innerText = "✅";
+    checkButton.addEventListener("click", checkToDo);
     span.innerText = text;
     li.appendChild(span);
     li.appendChild(deleteButton);
@@ -50,7 +76,7 @@ function loadToDos() {
         // 근데 새로고침 이후 다시 불러온게 string임.
         */
         const parsedToDos = JSON.parse(loadedToDos);
-        console.log(parsedToDos);
+        // console.log(parsedToDos);
         // JSON.parse 활용하기.
         parsedToDos.forEach(function(toDo) {
             paintToDo(toDo.text);
