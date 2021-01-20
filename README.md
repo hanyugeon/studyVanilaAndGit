@@ -55,3 +55,6 @@ github 원격저장소와 연결
 
 # git checkout (브랜치명)
 해당 브랜치로 워킹 디렉터리 변경
+
+# git push --set-upstream origin (브랜치명)
+새로운 브랜치에서 처음 push 할때 사용
