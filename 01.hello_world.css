@@ -1,11 +1,17 @@
 body{
-    background-color:peru;
+    background:grey;
 }
 
 h1 {
-    color:white;
+    background:black;
+    color:aquamarine;
+    font-weight: bold;
+    padding: 16;
 }
 
 h2 {
-    color:black;
+    background:white;
+    color:violet;
+    font-weight: bold;
+    padding: 16;
 }
