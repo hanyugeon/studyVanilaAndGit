@@ -6,7 +6,20 @@ function getTime() {
     const minutes = date.getMinutes();
     const hours = date.getHours();
 
-    clockTitle.innerText = `${hours}:${minutes}`;
+    if(hours < 10) {
+        if(minutes < 10) {
+            clockTitle.innerText = `0${hours}:0${minutes}`;
+        } else {
+            clockTitle.innerText = `0${hours}:${minutes}`;
+        }    
+    } else {
+        if(minutes < 10) {
+            clockTitle.innerText = `${hours}:0${minutes}`;
+        } else {
+            clockTitle.innerText = `${hours}:${minutes}`;
+        }
+    }
+
 }
 
 function init() {
