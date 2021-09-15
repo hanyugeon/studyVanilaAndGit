@@ -1,0 +1,15 @@
+body {
+    background: #3f3f3f;
+}
+
+h1 {
+    color: #f5f5f5;
+}
+
+div.js-clock {
+    background: #5f5f5f;
+}
+
+h1.js-clockTitle {
+    color: #f5f5f5;
+}
