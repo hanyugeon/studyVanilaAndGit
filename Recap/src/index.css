@@ -2,14 +2,43 @@ body {
     background: #3f3f3f;
 }
 
+/* title */
 h1 {
     color: #f5f5f5;
-}
-
-div.js-clock {
     background: #5f5f5f;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px;
 }
 
-h1.js-clockTitle {
+/* clock */
+div.js-clockBlock {
+    background: #f5f5f5;
+    padding: 36px;
+}
+
+h2.js-clock {
+    color: #3f3f3f;
+    font-size: 96px;
+    font-weight:bold;
+    text-align: center;
+    padding: 24px;
+}
+
+/* toDOList */
+div.js-listBlock {
+    background: #5f5f5f;
+    padding: 24px;
+}
+
+h2.js-listTitle {
     color: #f5f5f5;
+    text-align: center;
+    font-size: 24px;
+}
+
+ul.js-listContents {
+    color: #f5f5f5;
+    font-size: 18px;
 }
