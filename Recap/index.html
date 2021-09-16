@@ -6,10 +6,21 @@
         <link rel="stylesheet" href="src/index.css">
     </head>
     <body>
-        <h1>안녕! 바닐라!</h1>        
-        <div class="js-clock">
-            <h1 class="js-clockTitle">00:00</h1>
+        <div class="js-clockBlock">
+            <h2 class="js-clock">00:00</h2>
+        </div>
+        <h1>안녕! 바닐라!</h1>
+        <div class="js-listBlock">
+            <h2 class="js-listTitle">오늘의 할 일</h2>
+            <form class="js-listInput">
+                <input type="text" placeholder="할 일을 써보세요.">
+            </form>
+            <hr />
+            <ul class="js-listContents">
+
+            </ul>
         </div>
         <script src="src/clock/clock.js"></script>
+        <script src="src/toDoList/toDoList.js"></script>
     </body>
 </html>
